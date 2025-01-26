@@ -27,8 +27,22 @@ h1 {
         <br>
         art-tech
     </h1>
+    <img src="images/1.png" alt="Art Tech Store" style="display: block; margin: 0 auto;"/>
     <h1>
         והראש על המחשב והתמונות
     </h1>
+    <script>
+        
+        function changeImage() {
+            // rand number between 1 and 4 (inclusive)
+            const rand = Math.floor(Math.random() * 4) + 1;
+            console.log('changing image to ' + rand);
+            img_path = `images/${rand}.png`;
+            document.querySelector('img').src = img_path;
+        }
+
+        // change the image source to the second image every 3 seconds
+        setInterval(changeImage, 5000);
+    </script>
 </body>
 </html>
